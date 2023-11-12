@@ -55,7 +55,7 @@ nav a:hover {
 
 .jumbotron {
   background-image: url('../image/header.png');
-  background-position: 30% 50%;
+  background-position: 30% 30%;
   background-size: cover;
   /*background-position: center;*/
   height: 300px;
