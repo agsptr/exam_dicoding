@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
 
 *{
   box-sizing: border-box;
@@ -10,27 +9,54 @@ body {
 }
 
 h2, h3 {
-  color: #00a2c6
+  color: #CE1818;
+  font-family: 'PT Sans', sans-serif;
 }
 
-footer {
-  padding: 20px;
-  color: white;
-  background-color: #00a2c6;
+div a{
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #CE1818;
+}
+
+div a:hover {
+  font-weight: bold;
+  color: #e17474;
+}
+
+
+nav li {
+  list-style-type: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+nav {
+ background-color: #CE1818;
+ padding: 5px;
+ position: sticky;
+ top: 0;
+}
+
+nav ul{
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
 }
 
 nav a {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: bold;
   text-decoration: none;
   color: white;
 }
 
 nav a:hover {
   font-weight: bold;
+  color: #f5d0d0;
 }
 
-.profile header {
+.logo header {
   text-align: center;
 }
 
@@ -40,9 +66,10 @@ nav a:hover {
   /* agar gambar proporsional*/
   object-fit: cover;
   object-position: center;
+  border-radius: 5px;
 }
 
-.profile img {
+.logo img {
   width: 200px;
 }
 
@@ -57,7 +84,6 @@ nav a:hover {
   background-image: url('../image/header.png');
   background-position: 30% 30%;
   background-size: cover;
-  /*background-position: center;*/
   height: 300px;
 
 }
@@ -68,22 +94,67 @@ nav a:hover {
   object-fit: cover;
 }
 
-nav li {
-  list-style-type: none;
+header{
+  display: inline;
 }
 
-nav {
- background-color: #00a2c6;
- padding: 5px;
- position: sticky;
- top: 0;
-}
-
-nav ul{
-  padding-inline: 4rem;
+.wrapper {
   display: flex;
-  gap: 2rem;
+  gap: 0.5rem;
 }
+
+.inner {
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 300px;
+  flex: 3;
+}
+
+.inner-img{
+  width: 100%;
+  height: 150px;
+  /* agar gambar proporsional*/
+  object-fit: cover;
+  object-position: center;
+}
+
+.inner img{
+  border-radius: 5px;
+}
+
+.inner-list{
+  display: flex;
+  align-items: center;
+  margin-block: 20px;
+}
+
+.inner-list-img{
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-inner{
+  flex: 1;
+}
+
+.text-inner a{
+  font-size: 20px;
+}
+
+.text-inner p{
+  text-align: right;
+  font-size: 15px;
+}
+
+article p{
+  text-align: justify;
+}
+
 
 main {
   padding: 20px;
@@ -103,8 +174,14 @@ aside{
   flex: 1;
 }
 
-header{
-  display: inline;
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #CE1818;
+}
+
+table{
+  text-align: left;
 }
 
 @media screen and (max-width:  1200px){
@@ -115,14 +192,31 @@ header{
   main aside {
     align-self: center;
   }
+}
 
 @media screen and (max-width:  768px){
   nav ul {
     justify-content: center;
   }
-}
+
+  .wrapper {
+    flex-direction: column; /* Mengubah tata letak menjadi list vertikal */
+    align-items: center; /* Pusatkan elemen pada layar kecil */
+  }
+
+  .inner {
+    width: 100%; /* Lebar elemen menjadi 100% untuk mengisi layar penuh */
+  }
+
+  .inner-img{
+    margin-right: 0;
+    margin-bottom: 10px;
+    height: 250px;
+  }
+
 
   main aside {
     align-self: stretch;
   }
 }
+
