@@ -1,0 +1,222 @@
+
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3 {
+  color: #CE1818;
+  font-family: 'PT Sans', sans-serif;
+}
+
+div a{
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #CE1818;
+}
+
+div a:hover {
+  font-weight: bold;
+  color: #e17474;
+}
+
+
+nav li {
+  list-style-type: none;
+  font-family: 'PT Sans', sans-serif;
+}
+
+nav {
+ background-color: #CE1818;
+ padding: 5px;
+ position: sticky;
+ top: 0;
+}
+
+nav ul{
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: #f5d0d0;
+}
+
+.logo header {
+  text-align: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  /* agar gambar proporsional*/
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
+
+.logo img {
+  width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.jumbotron {
+  background-image: url('../image/header.png');
+  background-position: 30% 30%;
+  background-size: cover;
+  height: 300px;
+
+}
+
+.jumbotron img{
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header{
+  display: inline;
+}
+
+.wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.inner {
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 300px;
+  flex: 3;
+}
+
+.inner-img{
+  width: 100%;
+  height: 150px;
+  /* agar gambar proporsional*/
+  object-fit: cover;
+  object-position: center;
+}
+
+.inner img{
+  border-radius: 5px;
+}
+
+.inner-list{
+  display: flex;
+  align-items: center;
+  margin-block: 20px;
+}
+
+.inner-list-img{
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-inner{
+  flex: 1;
+}
+
+.text-inner a{
+  font-size: 20px;
+}
+
+.text-inner p{
+  text-align: right;
+  font-size: 15px;
+}
+
+article p{
+  text-align: justify;
+}
+
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#content{
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside{
+  flex: 1;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #CE1818;
+}
+
+table{
+  text-align: left;
+}
+
+@media screen and (max-width:  1200px){
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width:  768px){
+  nav ul {
+    justify-content: center;
+  }
+
+  .wrapper {
+    flex-direction: column; /* Mengubah tata letak menjadi list vertikal */
+    align-items: center; /* Pusatkan elemen pada layar kecil */
+  }
+
+  .inner {
+    width: 100%; /* Lebar elemen menjadi 100% untuk mengisi layar penuh */
+  }
+
+  .inner-img{
+    margin-right: 0;
+    margin-bottom: 10px;
+    height: 250px;
+  }
+
+
+  main aside {
+    align-self: stretch;
+  }
+}
+
